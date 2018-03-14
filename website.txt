@@ -1,0 +1,28 @@
+博客文献总结:
+https://handong1587.github.io/deep_learning/2015/10/09/ocr.html
+http://blog.csdn.net/peaceinmind/article/details/51387367
+
+github教程：
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+
+数据网址：
+ICDAR2017competition（包括DIBCO和）
+http://u-pat.org/ICDAR2017/program_competitions.php
+ICDAR2017 layout analysis:
+http://diuf.unifr.ch/main/hisdoc/icdar2017-hisdoc-layout-comp
+ICDAR2017 DIBCO2017：
+https://vc.ee.duth.gr/dibco2017/
+DIBCO2009：
+http://users.iit.demokritos.gr/~bgat/DIBCO2009/benchmark/
+DIBCO2010：
+http://users.iit.demokritos.gr/~bgat/H-DIBCO2010/benchmark/
+。。。
+
+deeplab相关：
+主页https://bitbucket.org/deeplab/deeplab-public/
+deeplabv2主页：
+https://bitbucket.org/aquariusjay/deeplab-public-ver2
+all of deeplabv2 pretrained model:
+http://liangchiehchen.com/projects/DeepLab_Models.html
+deeplabv2_vgg:
+http://liangchiehchen.com/projects/DeepLabv2_vgg.html
