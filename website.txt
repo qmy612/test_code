@@ -6,7 +6,7 @@ github教程：
 https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
 数据网址：
-ICDAR2017competition（包括DIBCO和）
+ICDAR2017competition（包括DIBCO和layout）
 http://u-pat.org/ICDAR2017/program_competitions.php
 ICDAR2017 layout analysis:
 http://diuf.unifr.ch/main/hisdoc/icdar2017-hisdoc-layout-comp
@@ -16,7 +16,6 @@ DIBCO2009：
 http://users.iit.demokritos.gr/~bgat/DIBCO2009/benchmark/
 DIBCO2010：
 http://users.iit.demokritos.gr/~bgat/H-DIBCO2010/benchmark/
-。。。
 
 deeplab相关：
 主页https://bitbucket.org/deeplab/deeplab-public/
