@@ -1,0 +1,52 @@
+廖雪峰教程：https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+1.安装git
+ubuntu安装命令：sudo apt-get install git
+windows安装需要下载后安装：打开git bash>> git config --global user.name "Your name" >> git config --global user.email 
+
+"email.com"
+且最好使用notepad++编辑器，设置编码为UTF-8 without BOM
+
+2.创建库
+创建空目录：cd d:/github >> mkdir learngit >> cd learngit >> pwd 
+转为仓库：git init
+库文件夹下新建readme.txt >> 添加到仓库：git add readme.txt（放到暂存区） >> 提交到仓库：git commit -m "注释说明" 
+
+3.查看文件修改命令
+查看当前状态：git status
+查看修改不同：git diff readme.txt
+提交修改：git add readme.txt >> git commit -m "注释说明"
+查看提交历史：git log --pretty=oneline
+查看所有操作历史：git reflog
+
+4.版本退回
+退回上一个版本：git reset --hard HEAD^(上上个版本HEAD^^，上100个版本HEAD~100)
+退回某个版本：git reset --hard 19174
+
+三个区域的理解：本地文件夹（如learngit）->工作区，工作区中隐藏目录.git（包括HEAD指针等）->版本库，add加入暂存区，commit提交
+
+。
+
+5.撤销操作
+撤销工作区的修改，回到上一次add的状态：git checkout -- readme.txt
+撤销add操作暂存区的添加：git reset HEAD readme.txt
+撤销commit操作，版本退回：git reset --hard HEAD^
+
+6.删除文件
+工作区删除：rm test.txt，撤销该操作，从版本库恢复：git checkout -- test.txt
+版本库彻底删除：git rm test.txt >> git commit -m "remove test.txt"
+
+7.创建SSH key
+$ ssh-keygen -t rsa -C "youremail@example.com" 
+setting中add key，复制id_rsa.pub中的内容，多个key对应多台可提交的电脑
+
+8.添加到远程库github
+新建一个repository，如test_code
+当前工作区文件夹关联到远程库：git remote add origin https://github.com/qmy612/test_code.git
+上传至远程库：git push -u origin master（首次提交），git push origin master（更新提交）
+期间需要输入用户名和密码
+
+至此完成了本地上传远程github的步骤，疑问：每次操作都对应一个commit，如果几次操作都未commit，那commit时是最新的那次操作？
+在master分支下添加文件夹？
+
+
+
