@@ -1,0 +1,55 @@
+安装教程：
+1.deeplab v2安装配置：http://blog.csdn.net/tianrolin/article/details/71246472
+步骤1：安装依赖库matio，wget，matio若有问题可参考http://blog.csdn.net/jyl1999xxxx/article/details/70196876
+步骤2：make -j8
+       make test -j8
+       make pycaffe
+       make pytest
+安装过程中可能出现错误
+1.CUDA8.0环境下atomicAdd错误
+2.cuDNN v5环境会出现类似下面的接口错误
+3.cmake编译`Mat_VarFree'一类错误
+
+2.图像语义分割：从头开始训练deeplab v2系列之一【源码解析】：http://blog.csdn.net/Xmo_jiao/article/details/77488180
+or https://github.com/xmojiao/deeplab_v2
+
+3.Deeplab v2 调试全过程（Ubuntu 16.04+cuda8.0）
+步骤1：安装依赖库matio，wget
+步骤2：git clone https://github.com/xmojiao/deeplab_v2.git 
+       make all -j16 
+可能出现错误：src/caffe/net.cpp:8:18: fatal error: hdf5.h: No such file or directory 
+ compilation terminated. 
+
+3.deeplab v2编译caffe：https://www.cnblogs.com/xiaoxiao9292/p/7709726.html
+步骤1：git clone 
+步骤2：sudo cp Makefile.config.example Makefile.config
+       sudo gedit Makefile.config
+       INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial
+       LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/hdf5/serial 
+步骤3：make
+步骤4：修改bashrc，增加安装的matio和hdf5的路径；caffe中Python的路径
+可能出现错误：fatal error: hdf5.h
+./include/caffe/common.cuh(9): error: function "atomicAdd(double *, double)" has already been defined
+
+4.问题汇总：http://blog.csdn.net/xczexcel/article/details/70185643
+问题：cudnn降级为v4 or 覆盖对应caffe中文件；matio.h no such file or directory问题；atomicAdd的重写问题；CUDN_MAP_ERROR；找不到mat系列文件
+
+预训练模型：
+deeplab models
+http://liangchiehchen.com/projects/DeepLab_Models.html
+
+1.Deeplab-LargeFOV:  http://www.cs.jhu.edu/~alanlab/ccvl/DeepLab-LargeFOV/
+2.Deeplabv2-vgg： http://liangchiehchen.com/projects/DeepLabv2_vgg.html
+数据集准备：
+txt格式：/JPEGImages/000001.jpg /Segmentation/000001.png
+
+训练脚本run_pascal.sh并保存训练日志 
+sh run_pascal.sh 2>&1|tee train.log
+
+修改配置文件
+1.修改为 WITH_PYTHON_LAYER := 1
+2.INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/x86_
+是否需要修改makefile
+1.409行：LIBRARIES += glog gflags protobuf boost_system boost_filesystem m hdf5_serial_hl hdf5_serial
+2.181行：NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
