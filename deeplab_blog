@@ -40,6 +40,7 @@ http://liangchiehchen.com/projects/DeepLab_Models.html
 
 1.Deeplab-LargeFOV:  http://www.cs.jhu.edu/~alanlab/ccvl/DeepLab-LargeFOV/
 2.Deeplabv2-vgg： http://liangchiehchen.com/projects/DeepLabv2_vgg.html
+pretrained-model: http://liangchiehchen.com/projects/DeepLab_Models.html
 数据集准备：
 txt格式：/JPEGImages/000001.jpg /Segmentation/000001.png
 
