@@ -1,0 +1,21 @@
+1.FCNPASCAL VOC 2011-12,NYUDv2,SIFT Flow, PASCAL-Context2.Deeplabv1PASCAL VOC 20123.Deeplabv2PASCAL VOC 2012, PASCAL-Context,PASCAL-Person-Part,Cityscapes4.Deeplabv3PASCAL VOC 2012augment the dataset by the extra annotations provided by [24], resulting in 10582 (trainaug) training images.5.DSNDIBCO(2009,2011,2013),HDIBCO(2010,2012,2013),Bickley-diary dataset, Persian Heritage Image Binarization dataset (PHIDB),Synchromedia Multispectral dataset (S-MS)
+Bickley-diary dataset: BinarizationShop: a user- assisted software suite for converting old documents to black-and-whitePHIDB: An efficient ground truthing tool for binarization of historical manuscripts(ICDAR 2013)S-MS: ICDAR 2015 multispectral text extraction contest (MS-TEx 2015)6.selectional encoder-decoderDIBCO,PLM, Persian Heritage Image Binarization Competition,Music scores: Salzinnes Antiphonal Manuscript,Einsiedeln StiftsbibliothekPersian heritage image binarization competition (PHIBC 2012) 
+
+class contains background
+PASCAL VOC 2012scale:4369class:21image size:500x375（Not unified）train/val/test:1464/1449/1456websit:http://host.robots.ox.ac.uk/pascal/VOC/voc2012/note:官网"flickr" terms of use 
+class:personbird, cat, cow, dog, horse, sheepaeroplane, bicycle, boat, bus, car, motorbike, trainbottle, chair, dining table, potted plant, sofa, tv/monitor官网2913张pdf：The PASCAL Visual Object Classes Challenge2012 (VOC2012) Development Kithttp://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf
+MS COCOscale:328124class: 92image size:trainval/test:165482/81208/81434(2015)websit:http://mscoco.org/note:
+pdf:Microsoft COCO: Common Objects in Context
+Cityscapesscale:5000class:20/8(category)image size:train/val/test:2975/500/1525websit:https://www.cityscapes-dataset.com/note:
+pdf:The cityscapes dataset for semantic urban scene understanding
+DIBCO 2009-2016(note,trainval from website or paper)scale:84class:2image size:Not unifiedtrainval/test:N/Awebsit:https://vc.ee.duth.gr/dibco2017/note:
+num:10+10+28+16+10+10
+Palm Leaf Manuscriptsscale:100class:2image size:trainval/test:50/50websit:note:缺图
+pdf:Icfhr 2016 competition on the analysis of handwritten text in images of balinese palm leaf manuscripts
+DIVA-HisDB(ok)scale:150class:4image size:trainval/test:60/30/60websit:diuf.unifr.ch/main/hisdoc/diva-hisdbnote:research only 
+NYUDv2num: 1449class: 41trainval/test: 795/654
+SIFT Flowscale:2688class:34image size:trainval/test:2488/200websit:note:
+PASCAL-Contextscale:class:59image size:trainval/test:4998/5105websit:note:
+PASCAL-Person-Partscale:class:7image size:trainval/test:1716/1817websit:note:
+
+scale:class:image size:trainval/test:websit:note:
